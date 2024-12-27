@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Kontak{% endblock %}
+{% block content %}
+<main class="container py-5">
+    <section class="contact-info text-center mb-3">
+        <header class="mb-4">
+            <h2 class="text-primary fw-bold">Hubungi Kami</h2>
+            <p class="text-muted">Kami siap membantu Anda. Berikut adalah cara untuk menghubungi kami:</p>
+        </header>
+       
+        <div class="row">
+            <div class="mb-4">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <h3 class="card-title text-success">Email</h3>
+                        <p>lingkungansehatdesamuer@lingkungansehat.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <h3 class="card-title text-success">Lokasi Kami</h3>
+                        <p>Temui kami di lokasi berikut:</p>
+                        <div class="map-container mb-4"">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m11!1m3!1d170.3194187147137!2d117.72982347931949!3d-8.74992529743874!2m2!1f348.4566699625483!2f45!3m2!1i1024!2i768!4f35!3m2!1m1!2s!5e1!3m2!1sid!2sid!4v1735176671032!5m2!1sid!2sid" width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="report-form mt-5">
+        <div class="card shadow border-0">
+            <div class="card-body">
+                <h3 class="card-title text-success text-center mb-4">Kirim Laporan</h3>
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="nama" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="nama" name="nama">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="judul" class="form-label">Judul Laporan</label>
+                        <input type="text" class="form-control" id="judul" name="judul">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="kategori" class="form-label">Kategori</label>
+                        <select class="form-select" id="kategori" name="kategori">
+                            <option value="">Pilih Kategori</option>
+                            <option value="sampah">Masalah Sampah</option>
+                            <option value="pencemaran">Pencemaran Lingkungan</option>
+                            <option value="kerusakan">Kerusakan Fasilitas</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="deskripsi" class="form-label">Deskripsi Masalah</label>
+                        <textarea class="form-control" id="deskripsi" name="deskripsi" rows="4"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lokasi" class="form-label">Lokasi</label>
+                        <input type="text" class="form-control" id="lokasi" name="lokasi">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="gambar" class="form-label">Upload Gambar</label>
+                        <input type="file" class="form-control" id="gambar" name="gambar">
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Kirim Laporan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

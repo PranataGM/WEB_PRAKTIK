@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 90vh; background: linear-gradient(45deg, #8e2de2, #4a00e0); border-radius: 8px; margin-top: 70px;">
+    <div class="container bg-white p-4 rounded shadow" style="max-width: 400px;">
+        <h2 class="text-center text-primary fw-bold mb-4 position-relative">Login</h2>
+        <form method="POST" id="loginForm" style="margin-bottom: 50px;">
+            <div class="mb-3 position-relative">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter Your Username" required>
+                <div class="underline position-absolute w-100" style="height: 1px; bottom: -5px; left: 0;"></div>
+            </div>
+
+            <div class="mb-3 position-relative">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter Your Password" required>
+                <div class="underline position-absolute w-100" style="height: 1px; bottom: -5px; left: 0;"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Continue</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
